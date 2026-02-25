@@ -68,6 +68,7 @@ export default function Portfolio() {
     {/* Resume Button */}
     <a
       href="/resume.pdf"
+      download
       className="resume-btn"
       target="_blank"
       rel="noopener noreferrer"
