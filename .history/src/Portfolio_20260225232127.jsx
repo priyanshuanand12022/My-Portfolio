@@ -50,39 +50,7 @@ export default function Portfolio() {
     <div className="portfolio">
 
       {/* ================= NAVBAR ================= */}
-      <nav className="nav">
-  {/* Left */}
-  <div className="nav-logo">Priyanshu Anand</div>
-
-  {/* Center */}
-  <ul className="nav-center">
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-
-  {/* Right */}
-  <div className="nav-right">
-
-    {/* Resume Button */}
-    <a
-      href="/resume.pdf"
-      download
-      className="resume-btn"
-    >
-      Resume
-    </a>
-
-    <a href="https://github.com/priyanshuanand12022" target="_blank">
-      <img className="icon" src="/github.svg" alt="GitHub" />
-    </a>
-
-    <a href="https://www.linkedin.com/in/priyanshu-anand-213315353" target="_blank">
-      <img className="icon" src="/linkedin.svg" alt="LinkedIn" />
-    </a>
-  </div>
-</nav>
+      
 
       {/* ================= HERO ================= */}
       <section id="about" className="hero">

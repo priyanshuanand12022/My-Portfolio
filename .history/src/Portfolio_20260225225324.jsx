@@ -22,25 +22,24 @@ export default function Portfolio() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    emailjs
-      .send(
-        "service_lk6jd4n",
-        "template_el7uc7k",
-        {
-          name: formData.name,
-          email: formData.email,
-          subject: formData.subject,
-          message: formData.message,
-        },
-        "nVCyFrHKLSf0xcnOJ"
-      )
-      .then(() => {
-        setSubmitted(true);
-      })
-      .catch((err) => {
-        console.log("Email send error:", err);
-        alert("Something went wrong!");
-      });
+    emailjs.send(
+    "service_lk6jd4n",
+    "template_el7uc7k",
+    {
+      name: formData.name,
+      email: formData.email,
+      subject: formData.subject,
+      message: formData.message,
+    },
+    "nVCyFrHKLSf0xcnOJ"
+  )
+  .then(() => {
+    setSubmitted(true);
+    })
+  .catch((err) => {
+    console.log("Email send error:", err);
+    alert("Something went wrong!");
+  });
   };
 
   const handleChange = (e) =>
@@ -48,43 +47,38 @@ export default function Portfolio() {
 
   return (
     <div className="portfolio">
+      <nav>
+  <div className="nav-logo">Priyanshu<span>.</span>Anand</div>
 
-      {/* ================= NAVBAR ================= */}
-      <nav className="nav">
-  {/* Left */}
-  <div className="nav-logo">Priyanshu Anand</div>
+  <ul className="nav-links">
+    {["About", "Skills", "Projects", "Contact"].map((s) => (
+      <li key={s}>
+        <a href={`#${s.toLowerCase()}`}>{s}</a>
+      </li>
+    ))}
 
-  {/* Center */}
-  <ul className="nav-center">
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#contact">Contact</a></li>
+    {/* Social Icons */}
+    <li className="social-icons">
+      <a
+        href="https://github.com/priyanshuanand12022"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img className="icon" src="/github.svg" alt="GitHub" />
+      </a>
+
+      <a
+        href="https://www.linkedin.com/in/priyanshu-anand-213315353"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img className="icon" src="/linkedin.svg" alt="LinkedIn" />
+      </a>
+    </li>
   </ul>
-
-  {/* Right */}
-  <div className="nav-right">
-
-    {/* Resume Button */}
-    <a
-      href="/resume.pdf"
-      download
-      className="resume-btn"
-    >
-      Resume
-    </a>
-
-    <a href="https://github.com/priyanshuanand12022" target="_blank">
-      <img className="icon" src="/github.svg" alt="GitHub" />
-    </a>
-
-    <a href="https://www.linkedin.com/in/priyanshu-anand-213315353" target="_blank">
-      <img className="icon" src="/linkedin.svg" alt="LinkedIn" />
-    </a>
-  </div>
 </nav>
 
-      {/* ================= HERO ================= */}
+      {/* HERO */}
       <section id="about" className="hero">
         <h1>Building performant, scalable & user-focused applications</h1>
 
@@ -101,7 +95,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* ================= SKILLS ================= */}
+      {/* SKILLS */}
       <section id="skills" className="skills">
         <div className="section-tag">SKILLS</div>
         <h2 className="section-title">What I Bring</h2>
@@ -135,7 +129,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* ================= PROJECTS ================= */}
+      {/* PROJECTS */}
       <section id="projects" className="projects">
         <div className="section-tag">PORTFOLIO</div>
         <h2 className="section-title">Selected Projects</h2>
@@ -146,10 +140,7 @@ export default function Portfolio() {
           <div className="project-card">
             <img src={webrtcImg} className="project-img" alt="WebRTC" />
             <div className="project-tags">
-              <span>React</span>
-              <span>WebRTC</span>
-              <span>Node.js</span>
-              <span>Socket.io</span>
+              <span>React</span><span>WebRTC</span><span>Node.js</span><span>Socket.io</span>
             </div>
             <h3>Web-RTC Video Conferencing App</h3>
             <p>Real-time conferencing with multi-user rooms under 200ms latency.</p>
@@ -164,10 +155,7 @@ export default function Portfolio() {
           <div className="project-card">
             <img src={movieImg} className="project-img" alt="Movie Dashboard" />
             <div className="project-tags">
-              <span>React</span>
-              <span>CRUD</span>
-              <span>Admin Panel</span>
-              <span>JSON API</span>
+              <span>React</span><span>CRUD</span><span>Admin Panel</span><span>JSON API</span>
             </div>
             <h3>Movie Database Admin Dashboard</h3>
             <p>Dashboard enabling full CRUD automation for 500+ movie records.</p>
@@ -182,10 +170,7 @@ export default function Portfolio() {
           <div className="project-card">
             <img src={weatherImg} className="project-img" alt="Weather App" />
             <div className="project-tags">
-              <span>Java</span>
-              <span>API</span>
-              <span>Weather</span>
-              <span>GUI</span>
+              <span>Java</span><span>API</span><span>Weather</span><span>GUI</span>
             </div>
             <h3>Weather Forecasting Application</h3>
             <p>Forecasts for 1,000+ global locations with optimized APIs.</p>
@@ -199,19 +184,15 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* ================= CONTACT ================= */}
+      {/* CONTACT */}
       <section id="contact" className="contact">
         <div className="section-tag light">CONTACT</div>
         <h2 className="section-title light">Let's Connect</h2>
 
-        <p className="contact-desc">
-          Have a project or collaboration in mind? Feel free to reach out.
-        </p>
+        <p className="contact-desc">Have a project or collaboration in mind? Feel free to reach out.</p>
 
         {submitted ? (
-          <div className="thankyou">
-            Thank you! I’ll get back to you soon.
-          </div>
+          <div className="thankyou">Thank you! I’ll get back to you soon.</div>
         ) : (
           <form className="contact-form" onSubmit={handleSubmit}>
             <input name="name" placeholder="Your Name" required onChange={handleChange} />
@@ -223,11 +204,9 @@ export default function Portfolio() {
         )}
       </section>
 
-      {/* ================= FOOTER ================= */}
       <footer className="footer">
         © 2026 <span>Priyanshu Anand</span> — All Rights Reserved.
       </footer>
-
     </div>
   );
 }

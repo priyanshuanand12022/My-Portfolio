@@ -68,8 +68,8 @@ body {
 
 .resume-btn {
   border: 1px solid #c9a84c;
-  background: transparent;
-  color: #c9a84c;
+  background: #c9a84c;
+  color: #0a1628;
   padding: 6px 16px;
   border-radius: 6px;
   text-decoration: none;

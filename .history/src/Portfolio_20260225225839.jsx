@@ -51,38 +51,37 @@ export default function Portfolio() {
 
       {/* ================= NAVBAR ================= */}
       <nav className="nav">
-  {/* Left */}
-  <div className="nav-logo">Priyanshu Anand</div>
+        <div className="nav-logo">
+          Priyanshu<span>     </span>Anand
+        </div>
 
-  {/* Center */}
-  <ul className="nav-center">
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
+        <ul className="nav-links">
+          {["About", "Skills", "Projects", "Contact"].map((s) => (
+            <li key={s}>
+              <a href={`#${s.toLowerCase()}`}>{s}</a>
+            </li>
+          ))}
+        </ul>
 
-  {/* Right */}
-  <div className="nav-right">
+        {/* Social Icons */}
+        <div className="nav-social">
+          <a
+            href="https://github.com/priyanshuanand12022"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="/github.svg" alt="GitHub" className="icon" />
+          </a>
 
-    {/* Resume Button */}
-    <a
-      href="/resume.pdf"
-      download
-      className="resume-btn"
-    >
-      Resume
-    </a>
-
-    <a href="https://github.com/priyanshuanand12022" target="_blank">
-      <img className="icon" src="/github.svg" alt="GitHub" />
-    </a>
-
-    <a href="https://www.linkedin.com/in/priyanshu-anand-213315353" target="_blank">
-      <img className="icon" src="/linkedin.svg" alt="LinkedIn" />
-    </a>
-  </div>
-</nav>
+          <a
+            href="https://www.linkedin.com/in/priyanshu-anand-213315353"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="/linkedin.svg" alt="LinkedIn" className="icon" />
+          </a>
+        </div>
+      </nav>
 
       {/* ================= HERO ================= */}
       <section id="about" className="hero">

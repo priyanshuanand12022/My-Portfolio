@@ -51,10 +51,10 @@ export default function Portfolio() {
 
       {/* ================= NAVBAR ================= */}
       <nav className="nav">
-  {/* Left */}
+  {/* Left Section */}
   <div className="nav-logo">Priyanshu Anand</div>
 
-  {/* Center */}
+  {/* Center Section */}
   <ul className="nav-center">
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
@@ -62,18 +62,8 @@ export default function Portfolio() {
     <li><a href="#contact">Contact</a></li>
   </ul>
 
-  {/* Right */}
+  {/* Right Section */}
   <div className="nav-right">
-
-    {/* Resume Button */}
-    <a
-      href="/resume.pdf"
-      download
-      className="resume-btn"
-    >
-      Resume
-    </a>
-
     <a href="https://github.com/priyanshuanand12022" target="_blank">
       <img className="icon" src="/github.svg" alt="GitHub" />
     </a>
