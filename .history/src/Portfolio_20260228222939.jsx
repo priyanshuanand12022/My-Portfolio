@@ -9,7 +9,6 @@ import weatherImg from "./assets/weather.png";
 import backendImg from "./assets/backend.png";
 import problemImg from "./assets/problem.png";
 import teamImg from "./assets/team.png";
-import frontendImg from "./assets/frontend-dev.png";
 
 export default function Portfolio() {
   const [submitted, setSubmitted] = useState(false);
@@ -112,7 +111,7 @@ export default function Portfolio() {
         <div className="skills-grid">
 
           <div className="skill-card">
-            <img src={frontendImg} alt="Frontend Development" className="skill-img" />
+            <img src={webrtcImg} alt="Frontend" className="skill-img" />
             <h3>Frontend Development</h3>
             <p>React, JavaScript, HTML, CSS, UI/UX oriented design.</p>
           </div>
@@ -234,7 +233,7 @@ export default function Portfolio() {
       onClick={() => window.open("/certificates/cert3.pdf", "_blank")}
       style={{ cursor: "pointer" }}
     >
-      <img src="/cert-images/data-structures.png" className="skill-img" />
+      <img src={problemImg} alt="Cert 3" className="skill-img" />
       <h3>Data Structures</h3>
       <p>Issued by UC San Diego Higher School of Economics</p>
     </div>
@@ -244,7 +243,7 @@ export default function Portfolio() {
       onClick={() => window.open("/certificates/cert4.pdf", "_blank")}
       style={{ cursor: "pointer" }}
     >
-      <img src="/cert-images/azure-computer-vision.png" className="skill-img" />
+      <img src={teamImg} alt="Cert 4" className="skill-img" />
       <h3>Build a computer vision app with Azure Cognitive Services</h3>
       <p>Issued by Microsoft</p>
     </div>

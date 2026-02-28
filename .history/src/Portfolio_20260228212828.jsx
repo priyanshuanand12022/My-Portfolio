@@ -9,7 +9,6 @@ import weatherImg from "./assets/weather.png";
 import backendImg from "./assets/backend.png";
 import problemImg from "./assets/problem.png";
 import teamImg from "./assets/team.png";
-import frontendImg from "./assets/frontend-dev.png";
 
 export default function Portfolio() {
   const [submitted, setSubmitted] = useState(false);
@@ -112,7 +111,7 @@ export default function Portfolio() {
         <div className="skills-grid">
 
           <div className="skill-card">
-            <img src={frontendImg} alt="Frontend Development" className="skill-img" />
+            <img src={webrtcImg} alt="Frontend" className="skill-img" />
             <h3>Frontend Development</h3>
             <p>React, JavaScript, HTML, CSS, UI/UX oriented design.</p>
           </div>
@@ -214,7 +213,7 @@ export default function Portfolio() {
       onClick={() => window.open("/certificates/cert1.pdf", "_blank")}
       style={{ cursor: "pointer" }}
     >
-      <img src="/cert-images/spring-angular.png" className="skill-img" />
+      <img src={webrtcImg} alt="Cert 1" className="skill-img" />
       <h3>Spring and Angular Full Stack Developer</h3>
       <p>Issued by Infosys Springboard</p>
     </div>
@@ -224,9 +223,9 @@ export default function Portfolio() {
       onClick={() => window.open("/certificates/cert2.pdf", "_blank")}
       style={{ cursor: "pointer" }}
     >
-      <img src="/cert-images/ibm-sql-python.png" className="skill-img" />
-      <h3>Databases and SQL for Data Science with Python</h3>
-      <p>Issued by IBM</p>
+      <img src={backendImg} alt="Cert 2" className="skill-img" />
+      <h3>Backend Mastery Certification</h3>
+      <p>Issued by ABC Institute</p>
     </div>
 
     <div
@@ -234,9 +233,9 @@ export default function Portfolio() {
       onClick={() => window.open("/certificates/cert3.pdf", "_blank")}
       style={{ cursor: "pointer" }}
     >
-      <img src="/cert-images/data-structures.png" className="skill-img" />
+      <img src={problemImg} alt="Cert 3" className="skill-img" />
       <h3>Data Structures</h3>
-      <p>Issued by UC San Diego Higher School of Economics</p>
+      <p>UC San Diego Higher SCchool OF ECONOMICS</p>
     </div>
 
     <div
@@ -244,9 +243,9 @@ export default function Portfolio() {
       onClick={() => window.open("/certificates/cert4.pdf", "_blank")}
       style={{ cursor: "pointer" }}
     >
-      <img src="/cert-images/azure-computer-vision.png" className="skill-img" />
-      <h3>Build a computer vision app with Azure Cognitive Services</h3>
-      <p>Issued by Microsoft</p>
+      <img src={teamImg} alt="Cert 4" className="skill-img" />
+      <h3>Leadership Skills Certificate</h3>
+      <p>Issued by SkillUp / Coursera</p>
     </div>
 
   </div>

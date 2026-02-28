@@ -112,7 +112,7 @@ export default function Portfolio() {
         <div className="skills-grid">
 
           <div className="skill-card">
-            <img src={frontendImg} alt="Frontend Development" className="skill-img" />
+            <img src={webrtcImg} alt="Frontend" className="skill-img" />
             <h3>Frontend Development</h3>
             <p>React, JavaScript, HTML, CSS, UI/UX oriented design.</p>
           </div>
